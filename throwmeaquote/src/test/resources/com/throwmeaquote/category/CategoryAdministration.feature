@@ -17,3 +17,9 @@ Scenario: Delete category
 	When I save a new category with a description of "Wabba Wabba"
 	And I delete the category
 	Then the category no longer exists
+	
+Scenario: Saving a sub-category
+	When I save a new category with a description of "How To"
+	And I add a sub-category with a description of "Trim Chicken Beaks"
+	Then the category should contain the sub-category
+	

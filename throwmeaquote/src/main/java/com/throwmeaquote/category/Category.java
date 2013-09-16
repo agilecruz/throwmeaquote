@@ -2,6 +2,8 @@ package com.throwmeaquote.category;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +27,8 @@ public class Category {
 	
 	@Column(name="PARENT_ID", unique=false, nullable=false)
 	private Long parentId = 0L;
+	
+	private List<Category> subCategories;
 	
 	public Category(){}
 	
@@ -57,13 +61,11 @@ public class Category {
 		this.description = description;
 	}
 	
-	
-
-	/*public boolean contains(Category subCategory) {
+	public boolean contains(Category subCategory) {
 		return subCategories.contains(subCategory);
 	}
 
 	public void addChild(Category subCategory) {
 		subCategories.add(subCategory);
-	}*/
+	}
 }
