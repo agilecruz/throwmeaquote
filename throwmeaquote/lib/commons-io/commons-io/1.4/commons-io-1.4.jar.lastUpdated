@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed May 08 15:59:58 CDT 2013
+http\://maven.atlassian.com/public/.lastUpdated=1368046762134
+default-http\://repo.maven.apache.org/maven2/.lastUpdated=1368046798087
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact commons-io\:commons-io\:jar\:1.4 from/to central (http\://repo.maven.apache.org/maven2)\: /home/ctaylor/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar.ahcb0317ec664f54a42 (No such file or directory)
+http\://maven.atlassian.com/public/.error=

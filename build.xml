@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ThrowMeAQuote" default="dist">
+	<description>
+	</description>
+	<!-- set global properties for this build -->
+	<property name="src.path" location="throwmeaquote/src/main/java" />
+	<property name="build.path" location="build/" />
+	<property name="dist.path" location="build/" />
+	<property name="externals.path" location="throwmeaquote/lib/" />
+
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${build.path}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<echo>src.path: ${src.path}</echo>
+		<echo>maven.repo.path ${maven.repo.path}</echo>
+		<javac srcdir="${src.path}" destdir="${build.path}">
+			<classpath>
+				<pathelement path="${classpath}" />
+				<!--
+				<fileset dir="lib">
+					<include name="**/*.jar" />
+				</fileset>
+				-->
+				<pathelement location="classes" />
+				<dirset dir="${build.path}">
+					<include name="apps/**/classes" />
+					<exclude name="apps/**/*Test*" />
+				</dirset>
+				<dirset dir="${externals.path}">
+					<include name="**/*.jar" />
+				</dirset>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<mkdir dir="${dist.path}/lib" />
+
+		<jar jarfile="${dist.path}/lib/throwmeqauote-${DSTAMP}.jar" basedir="${build.path}" />
+	</target>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build.path}" />
+		<delete dir="${dist.path}" />
+	</target>
+</project>
+

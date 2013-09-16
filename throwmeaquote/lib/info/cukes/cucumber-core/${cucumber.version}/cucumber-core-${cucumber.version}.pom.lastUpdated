@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Sat Aug 03 18:57:37 CDT 2013
+default-http\://repo.maven.apache.org/maven2/.lastUpdated=1375574257126
+default-http\://maven.atlassian.com/public/.lastUpdated=1375574257125
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact info.cukes\:cucumber-core\:pom\:${cucumber.version} from/to central (http\://repo.maven.apache.org/maven2)\: IllegalArgumentException
+http\://maven.atlassian.com/public/.error=Could not transfer artifact info.cukes\:cucumber-core\:pom\:${cucumber.version} from/to atlassian (http\://maven.atlassian.com/public)\: IllegalArgumentException
