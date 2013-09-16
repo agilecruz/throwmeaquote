@@ -24,7 +24,7 @@ public class Category {
 	
 	@Column(name = "DESCRIPTION", unique = false, nullable = false, length = 100)
 	private String description;
-	
+s	
 	@Column(name="PARENT_ID", unique=false, nullable=false)
 	private Long parentId = 0L;
 	
