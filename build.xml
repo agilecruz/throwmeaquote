@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ThrowMeAQuote" default="dist">
+<project name="ThrowMeAQuote" default="dist" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
 	<description>
 	</description>
-	<!-- set global properties for this build -->
+
 	<property name="src.path" location="throwmeaquote/src/main/java" />
 	<property name="build.path" location="build/" />
 	<property name="dist.path" location="build/" />
-	<property name="externals.path" location="throwmeaquote/lib/" />
+	<property name="lib.path" location="lib/" />
 
+	<!-- setup maven references -->
+	<path id="maven-ant-tasks.classpath" path="lib/maven-ant-tasks-2.1.3.jar" />
+	<typedef resource="org/apache/maven/artifact/ant/antlib.xml" uri="antlib:org.apache.maven.artifact.ant" classpathref="maven-ant-tasks.classpath" />
+
+	<!-- generates build-dependencies.xml file from pom -->
+	<artifact:dependencies filesetId="dependencies.fileset" useScope="compile">
+		<pom id="core.pom.path" file="throwmeaquote/pom.xml" />
+	</artifact:dependencies>
+
+	<include file="target/build-dependencies.xml" />
+	<copy todir="${lib.path}">
+		<fileset refid="dependencies.fileset" />
+		<mapper type="flatten" />
+	</copy>
 	<target name="init">
 		<tstamp />
 		<mkdir dir="${build.path}" />
@@ -15,22 +29,19 @@
 
 	<target name="compile" depends="init" description="compile the source ">
 		<echo>src.path: ${src.path}</echo>
-		<echo>maven.repo.path ${maven.repo.path}</echo>
-		<javac srcdir="${src.path}" destdir="${build.path}">
+		<echo>lib.path ${lib.path}</echo>
+		<javac srcdir="${src.path}" destdir="${build.path}" includeAntRuntime="no" includeJavaRuntime="true" debug="true" debuglevel="source,lines">
+			<compilerarg value="-Xlint" />
 			<classpath>
 				<pathelement path="${classpath}" />
-				<!--
-				<fileset dir="lib">
+
+				<fileset dir="${lib.path}">
 					<include name="**/*.jar" />
 				</fileset>
-				-->
 				<pathelement location="classes" />
 				<dirset dir="${build.path}">
 					<include name="apps/**/classes" />
 					<exclude name="apps/**/*Test*" />
-				</dirset>
-				<dirset dir="${externals.path}">
-					<include name="**/*.jar" />
 				</dirset>
 			</classpath>
 		</javac>

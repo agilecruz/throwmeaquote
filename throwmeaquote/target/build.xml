@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-dependencies" default="init-dependencies">
+<target name="init-dependencies">
+    <echo level="info" message="Loading dependency paths from file: /home/ctaylor/workspace/throwmeaquote/target/build-dependencies.xml"/>
+    <property name="org.springframework:spring:jar" value="/home/ctaylor/.m2/repository/org/springframework/spring/2.5.6/spring-2.5.6.jar"/>
+    <fileset id="org.springframework:spring:jar" dir="/home/ctaylor/.m2/repository/org/springframework/spring/2.5.6">
+      <include name="spring-2.5.6.jar"/>
+    </fileset>
+    <property name="commons-logging:commons-logging:jar" value="/home/ctaylor/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+    <fileset id="commons-logging:commons-logging:jar" dir="/home/ctaylor/.m2/repository/commons-logging/commons-logging/1.1.1">
+      <include name="commons-logging-1.1.1.jar"/>
+    </fileset>
+    <property name="cglib:cglib:jar" value="/home/ctaylor/.m2/repository/cglib/cglib/2.2/cglib-2.2.jar"/>
+    <fileset id="cglib:cglib:jar" dir="/home/ctaylor/.m2/repository/cglib/cglib/2.2">
+      <include name="cglib-2.2.jar"/>
+    </fileset>
+    <property name="asm:asm:jar" value="/home/ctaylor/.m2/repository/asm/asm/3.3.1/asm-3.3.1.jar"/>
+    <fileset id="asm:asm:jar" dir="/home/ctaylor/.m2/repository/asm/asm/3.3.1">
+      <include name="asm-3.3.1.jar"/>
+    </fileset>
+    <property name="org.hibernate:hibernate-annotations:jar" value="/home/ctaylor/.m2/repository/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final.jar"/>
+    <fileset id="org.hibernate:hibernate-annotations:jar" dir="/home/ctaylor/.m2/repository/org/hibernate/hibernate-annotations/3.5.6-Final">
+      <include name="hibernate-annotations-3.5.6-Final.jar"/>
+    </fileset>
+    <property name="org.hibernate:hibernate-core:jar" value="/home/ctaylor/.m2/repository/org/hibernate/hibernate-core/3.5.6-Final/hibernate-core-3.5.6-Final.jar"/>
+    <fileset id="org.hibernate:hibernate-core:jar" dir="/home/ctaylor/.m2/repository/org/hibernate/hibernate-core/3.5.6-Final">
+      <include name="hibernate-core-3.5.6-Final.jar"/>
+    </fileset>
+    <property name="antlr:antlr:jar" value="/home/ctaylor/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+    <fileset id="antlr:antlr:jar" dir="/home/ctaylor/.m2/repository/antlr/antlr/2.7.7">
+      <include name="antlr-2.7.7.jar"/>
+    </fileset>
+    <property name="commons-collections:commons-collections:jar" value="/home/ctaylor/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
+    <fileset id="commons-collections:commons-collections:jar" dir="/home/ctaylor/.m2/repository/commons-collections/commons-collections/3.2.1">
+      <include name="commons-collections-3.2.1.jar"/>
+    </fileset>
+    <property name="dom4j:dom4j:jar" value="/home/ctaylor/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+    <fileset id="dom4j:dom4j:jar" dir="/home/ctaylor/.m2/repository/dom4j/dom4j/1.6.1">
+      <include name="dom4j-1.6.1.jar"/>
+    </fileset>
+    <property name="xml-apis:xml-apis:jar" value="/home/ctaylor/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+    <fileset id="xml-apis:xml-apis:jar" dir="/home/ctaylor/.m2/repository/xml-apis/xml-apis/1.0.b2">
+      <include name="xml-apis-1.0.b2.jar"/>
+    </fileset>
+    <property name="javax.transaction:jta:jar" value="/home/ctaylor/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar"/>
+    <fileset id="javax.transaction:jta:jar" dir="/home/ctaylor/.m2/repository/javax/transaction/jta/1.1">
+      <include name="jta-1.1.jar"/>
+    </fileset>
+    <property name="org.slf4j:slf4j-api:jar" value="/home/ctaylor/.m2/repository/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar"/>
+    <fileset id="org.slf4j:slf4j-api:jar" dir="/home/ctaylor/.m2/repository/org/slf4j/slf4j-api/1.5.8">
+      <include name="slf4j-api-1.5.8.jar"/>
+    </fileset>
+    <property name="org.hibernate:hibernate-commons-annotations:jar" value="/home/ctaylor/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar"/>
+    <fileset id="org.hibernate:hibernate-commons-annotations:jar" dir="/home/ctaylor/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final">
+      <include name="hibernate-commons-annotations-3.2.0.Final.jar"/>
+    </fileset>
+    <property name="org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar" value="/home/ctaylor/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+    <fileset id="org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar" dir="/home/ctaylor/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final">
+      <include name="hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+    </fileset>
+    <property name="javassist:javassist:jar" value="/home/ctaylor/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar"/>
+    <fileset id="javassist:javassist:jar" dir="/home/ctaylor/.m2/repository/javassist/javassist/3.12.1.GA">
+      <include name="javassist-3.12.1.GA.jar"/>
+    </fileset>
+    <property name="org.slf4j:slf4j-log4j12:jar" value="/home/ctaylor/.m2/repository/org/slf4j/slf4j-log4j12/1.5.2/slf4j-log4j12-1.5.2.jar"/>
+    <fileset id="org.slf4j:slf4j-log4j12:jar" dir="/home/ctaylor/.m2/repository/org/slf4j/slf4j-log4j12/1.5.2">
+      <include name="slf4j-log4j12-1.5.2.jar"/>
+    </fileset>
+    <property name="log4j:log4j:jar" value="/home/ctaylor/.m2/repository/log4j/log4j/1.2.14/log4j-1.2.14.jar"/>
+    <fileset id="log4j:log4j:jar" dir="/home/ctaylor/.m2/repository/log4j/log4j/1.2.14">
+      <include name="log4j-1.2.14.jar"/>
+    </fileset>
+    <property name="info.cukes:cucumber-java:jar" value="/home/ctaylor/.m2/repository/info/cukes/cucumber-java/1.1.2/cucumber-java-1.1.2.jar"/>
+    <fileset id="info.cukes:cucumber-java:jar" dir="/home/ctaylor/.m2/repository/info/cukes/cucumber-java/1.1.2">
+      <include name="cucumber-java-1.1.2.jar"/>
+    </fileset>
+    <property name="info.cukes:cucumber-core:jar" value="/home/ctaylor/.m2/repository/info/cukes/cucumber-core/1.1.3/cucumber-core-1.1.3.jar"/>
+    <fileset id="info.cukes:cucumber-core:jar" dir="/home/ctaylor/.m2/repository/info/cukes/cucumber-core/1.1.3">
+      <include name="cucumber-core-1.1.3.jar"/>
+    </fileset>
+    <property name="info.cukes:cucumber-junit:jar" value="/home/ctaylor/.m2/repository/info/cukes/cucumber-junit/1.1.2/cucumber-junit-1.1.2.jar"/>
+    <fileset id="info.cukes:cucumber-junit:jar" dir="/home/ctaylor/.m2/repository/info/cukes/cucumber-junit/1.1.2">
+      <include name="cucumber-junit-1.1.2.jar"/>
+    </fileset>
+    <property name="junit:junit:jar" value="/home/ctaylor/.m2/repository/junit/junit/4.11/junit-4.11.jar"/>
+    <fileset id="junit:junit:jar" dir="/home/ctaylor/.m2/repository/junit/junit/4.11">
+      <include name="junit-4.11.jar"/>
+    </fileset>
+    <property name="org.hamcrest:hamcrest-core:jar" value="/home/ctaylor/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+    <fileset id="org.hamcrest:hamcrest-core:jar" dir="/home/ctaylor/.m2/repository/org/hamcrest/hamcrest-core/1.3">
+      <include name="hamcrest-core-1.3.jar"/>
+    </fileset>
+    <property name="info.cukes:cucumber-picocontainer:jar" value="/home/ctaylor/.m2/repository/info/cukes/cucumber-picocontainer/1.1.3/cucumber-picocontainer-1.1.3.jar"/>
+    <fileset id="info.cukes:cucumber-picocontainer:jar" dir="/home/ctaylor/.m2/repository/info/cukes/cucumber-picocontainer/1.1.3">
+      <include name="cucumber-picocontainer-1.1.3.jar"/>
+    </fileset>
+    <property name="org.mockito:mockito-all:jar" value="/home/ctaylor/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar"/>
+    <fileset id="org.mockito:mockito-all:jar" dir="/home/ctaylor/.m2/repository/org/mockito/mockito-all/1.9.5">
+      <include name="mockito-all-1.9.5.jar"/>
+    </fileset>
+    <property name="com.googlecode.flyway:flyway-core:jar" value="/home/ctaylor/.m2/repository/com/googlecode/flyway/flyway-core/1.7/flyway-core-1.7.jar"/>
+    <fileset id="com.googlecode.flyway:flyway-core:jar" dir="/home/ctaylor/.m2/repository/com/googlecode/flyway/flyway-core/1.7">
+      <include name="flyway-core-1.7.jar"/>
+    </fileset>
+    <property name="mysql:mysql-connector-java:jar" value="/home/ctaylor/.m2/repository/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar"/>
+    <fileset id="mysql:mysql-connector-java:jar" dir="/home/ctaylor/.m2/repository/mysql/mysql-connector-java/5.1.21">
+      <include name="mysql-connector-java-5.1.21.jar"/>
+    </fileset>
+  </target>
+</project>

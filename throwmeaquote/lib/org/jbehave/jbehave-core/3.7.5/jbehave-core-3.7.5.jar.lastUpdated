@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Wed May 08 15:59:58 CDT 2013
-http\://maven.atlassian.com/public/.lastUpdated=1368046762134
-default-http\://repo.maven.apache.org/maven2/.lastUpdated=1368046798086
-http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.jbehave\:jbehave-core\:jar\:3.7.5 from/to central (http\://repo.maven.apache.org/maven2)\: /home/ctaylor/.m2/repository/org/jbehave/jbehave-core/3.7.5/jbehave-core-3.7.5.jar.ahc7d5687c2843a4b6b (No such file or directory)
-http\://maven.atlassian.com/public/.error=

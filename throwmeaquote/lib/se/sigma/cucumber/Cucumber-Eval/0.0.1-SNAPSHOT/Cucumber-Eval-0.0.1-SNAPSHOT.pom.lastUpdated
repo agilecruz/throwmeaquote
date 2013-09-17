@@ -1,4 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Fri May 10 13:16:58 CDT 2013
-default-http\://maven.atlassian.com/public/.lastUpdated=1368209818668
-http\://maven.atlassian.com/public/.error=Could not transfer artifact se.sigma.cucumber\:Cucumber-Eval\:pom\:0.0.1-SNAPSHOT from/to atlassian (http\://maven.atlassian.com/public)\: null to http\://maven.atlassian.com/public/se/sigma/cucumber/Cucumber-Eval/0.0.1-SNAPSHOT/Cucumber-Eval-0.0.1-SNAPSHOT.pom

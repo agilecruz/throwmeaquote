@@ -1,6 +1,0 @@
-#NOTE: This is an internal implementation file, its format can be changed without prior notice.
-#Fri May 10 12:08:41 CDT 2013
-http\://maven.atlassian.com/public/.lastUpdated=1368205677528
-default-http\://repo.maven.apache.org/maven2/.lastUpdated=1368205721160
-http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact info.cukes\:cucumber-picocontainer\:jar\:1.1.2 from/to central (http\://repo.maven.apache.org/maven2)\: /home/ctaylor/.m2/repository/info/cukes/cucumber-picocontainer/1.1.2/cucumber-picocontainer-1.1.2.jar.ahc9d0269986e8d457f (No such file or directory)
-http\://maven.atlassian.com/public/.error=
