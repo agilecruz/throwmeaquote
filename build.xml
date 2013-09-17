@@ -19,11 +19,13 @@
 		<javac srcdir="${src.path}" destdir="${build.path}">
 			<classpath>
 				<pathelement path="${classpath}" />
+				
 				<!--
 				<fileset dir="lib">
 					<include name="**/*.jar" />
 				</fileset>
 				-->
+				
 				<pathelement location="classes" />
 				<dirset dir="${build.path}">
 					<include name="apps/**/classes" />
