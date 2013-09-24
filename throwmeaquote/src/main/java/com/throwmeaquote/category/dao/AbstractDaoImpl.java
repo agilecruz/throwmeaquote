@@ -7,35 +7,44 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Criterion;
 import org.springframework.beans.factory.annotation.Autowired;
- 
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+@Repository
+@Transactional
 public abstract class AbstractDaoImpl<E, I extends Serializable> implements AbstractDao<E,I> {
  
-    private Class<E> entityClass;
- 
-    protected AbstractDaoImpl(Class<E> entityClass) {
-        this.entityClass = entityClass;
-    }
- 
-    @Autowired
+    public AbstractDaoImpl() { }
+
     private SessionFactory sessionFactory;
  
     public Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
     }
  
-    public E findById(I id) {
-        return (E) getCurrentSession().get(entityClass, id);
+    public void setSessionFactory(SessionFactory sessionFactory){
+    	this.sessionFactory = sessionFactory;
+    }
+    
+    public SessionFactory getSessionFactory(){
+    	return this.sessionFactory;
+    }
+    
+    public E findById(Class<E> entityClass, I id) {
+        Session currentSession = getCurrentSession();
+    	return (E) currentSession.get(entityClass, id);
     }
  
     public void save(E e) {
-        getCurrentSession().saveOrUpdate(e);
+    	Session currentSession = getCurrentSession();
+    	currentSession.saveOrUpdate(e);
     }
  
     public void delete(E e) {
         getCurrentSession().delete(e);
     }
  
-    public List findByCriteria(Criterion criterion) {
+    public List findByCriteria(Class<E> entityClass, Criterion criterion) {
         Criteria criteria = getCurrentSession().createCriteria(entityClass);
         criteria.add(criterion);
     

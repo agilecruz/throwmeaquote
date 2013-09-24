@@ -19,7 +19,7 @@ public class CategoryBoImpl implements CategoryBo {
 		this.categoryDao = categoryDao;
 	}
 	public Category findById(Long id) {
-		return categoryDao.findById(id);
+		return categoryDao.findById(Category.class, id);
 	}
 
 	public void save(Category category) {

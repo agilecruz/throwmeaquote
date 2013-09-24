@@ -40,6 +40,9 @@
 				<version>2.14.1</version>
 				<configuration>
 					<useFile>false</useFile>
+					<systemPropertyVariables>
+						<cucumber.reporter>pretty</cucumber.reporter>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 		</plugins>

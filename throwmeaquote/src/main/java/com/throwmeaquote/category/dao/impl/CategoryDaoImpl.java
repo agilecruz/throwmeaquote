@@ -10,6 +10,6 @@ import com.throwmeaquote.category.dao.CategoryDao;
 public class CategoryDaoImpl extends AbstractDaoImpl<Category, Long> implements CategoryDao {
 
 	protected CategoryDaoImpl() {
-		super(Category.class);
+		super();
 	}
 }
