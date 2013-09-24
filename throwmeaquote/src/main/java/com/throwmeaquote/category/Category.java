@@ -2,12 +2,18 @@ package com.throwmeaquote.category;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -15,20 +21,23 @@ import javax.persistence.UniqueConstraint;
 @Table(name="CATEGORY", catalog = "wholesomequotes", uniqueConstraints = 
 	{@UniqueConstraint(columnNames = "ID")}
 )
-public class Category {
+public class Category implements Serializable {
+	private static final long serialVersionUID = -7628174870133912798L;
+
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
-	private Long id = 0L;
-	//private List<Category> subCategories = new ArrayList<Category>();
+	private Long categoryId = 0L;
 	
 	@Column(name = "DESCRIPTION", unique = false, nullable = false, length = 100)
 	private String description;
-
-	@Column(name="PARENT_ID", unique=false, nullable=false)
-	private Long parentId = 0L;
 	
-	private List<Category> subCategories;
+	@ManyToOne(cascade={CascadeType.ALL})
+	@JoinColumn(name="PARENT_ID")
+	private Category parent; //figure out a way to get this mapping without have to refer to the parent
+	
+	@OneToMany(mappedBy="parent")
+	private List<Category> subCategories = new ArrayList<Category>();
 	
 	public Category(){}
 	
@@ -37,35 +46,31 @@ public class Category {
 	}
 	
 	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+		return categoryId;
 	}
 
 	public Long getParentId() {
-		return id;
+		return parent.getId();
 	}
 
-	public void setParentId(Long id) {
-		this.id = id;
+	public void setParent(Category parent){
+		this.parent = parent;
+		parent.addChild(this);
 	}
-
 	
 	public String getDescription(){
 		return description;
 	}
 
+	public void addChild(Category child) {
+		subCategories.add(child);
+	}
+	
 	public void setDescription(String description){
 		this.description = description;
 	}
 	
 	public boolean contains(Category subCategory) {
 		return subCategories.contains(subCategory);
-	}
-
-	public void addChild(Category subCategory) {
-		subCategories.add(subCategory);
 	}
 }

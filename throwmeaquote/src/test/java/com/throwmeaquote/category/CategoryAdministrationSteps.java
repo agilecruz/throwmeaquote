@@ -40,14 +40,16 @@ public class CategoryAdministrationSteps {
 	@Transactional
 	public void the_category_should_have_an_id_greater_than(Long id)
 			throws Throwable {
-		Category retrievedCategory = categoryBo.findById(category.getId());
+		Long idToFind = category.getId();
+		Category retrievedCategory = categoryBo.findById(idToFind);
 		Assert.assertTrue(retrievedCategory.getId() > id);
 	}
 
 	@Then("^the category should have a description of \"([^\"]*)\"$")
 	public void the_category_should_have_a_description_of(String description)
 			throws Throwable {
-		Category retrievedCategory = categoryBo.findById(category.getId());
+		Long id=category.getId();
+		Category retrievedCategory = categoryBo.findById(id);
 		Assert.assertEquals(description, retrievedCategory.getDescription());
 	}
 
@@ -77,7 +79,6 @@ public class CategoryAdministrationSteps {
 
 	@Then("^the category no longer exists$")
 	public void the_category_no_longer_exists() throws Throwable {
-		// Express the Regexp above with the code you wish you had
 		throw new PendingException();
 	}
 
@@ -85,8 +86,10 @@ public class CategoryAdministrationSteps {
 	public void I_add_a_sub_category_with_a_description_of(String description)
 			throws Throwable {
 		subCategory = new Category(description);
-		category.addChild(subCategory);
-		categoryBo.save(category);
+		
+		subCategory.setParent(category);
+		
+		categoryBo.save(subCategory);
 	}
 
 	@Then("^the category should contain the sub-category$")
