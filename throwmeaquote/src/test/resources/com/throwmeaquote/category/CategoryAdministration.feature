@@ -1,3 +1,4 @@
+@txn
 Feature: Category administration
 	In order to create categories for the user to select
 	As a site administrator, 
