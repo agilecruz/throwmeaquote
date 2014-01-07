@@ -38,6 +38,9 @@
 				<value>com.throwmeaquote.category.Category</value>
 				<value>com.throwmeaquote.category.dao.impl.CategoryDaoImpl</value>
 				<value>com.throwmeaquote.category.bo.impl.CategoryBoImpl</value>
+				<value>com.throwmeaquote.author.Author</value>
+                <value>com.throwmeaquote.author.dao.impl.AuthorDaoImpl</value>
+                <value>com.throwmeaquote.author.bo.impl.AuthorBoImpl</value>
 			</list>
 		</property>
 	</bean>

@@ -1,4 +1,4 @@
-package com.throwmeaquote.category.dao;
+package com.throwmeaquote.interfaces.dao;
 import java.io.Serializable;
 import java.util.List;
 

@@ -1,19 +1,19 @@
-Feature: Validating behavior of the category business object
+Feature: Validating behavior of the author business object
 	
-Scenario: Save new category
-	Given an instance of CategoryBo
-	When I save a new category on CategoryBo
-	Then the save method will be called on CategoryDao 1 time
+Scenario: Save new author
+	Given an instance of AuthorBo
+	When I save a new author on AuthorBo
+	Then the save method will be called on AuthorDao 1 time
 
-Scenario: Modify category
-	Given an instance of CategoryBo
-	When I save a new category on CategoryBo
-	And I modify the category description
-	Then the save method will be called on CategoryDao 2 times
+Scenario: Modify author
+	Given an instance of AuthorBo
+	When I save a new author on AuthorBo
+	And I modify the author description
+	Then the save method will be called on AuthorDao 2 times
 	
-Scenario: Delete category
-	Given an instance of CategoryBo
-	When I save a new category on CategoryBo
-	And then delete the category
-	Then the delete method will be called on CategoryDao 1 time
+Scenario: Delete author
+	Given an instance of AuthorBo
+	When I save a new author on AuthorBo
+	And then delete the author
+	Then the delete method will be called on AuthorDao 1 time
 	
